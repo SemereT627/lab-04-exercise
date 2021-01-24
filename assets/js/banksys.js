@@ -65,11 +65,10 @@ function withdraw(user) {
     let amount = prompt("How much do you want to withdraw?")
     if (bank.users.includes(user)) {
         if (bank.action.deposit >= parseFloat(amount)) {
-            alert("You have withdraw " + amount + "br");
             bank.action.deposit -= amount;
             bank.action.deposit = parseFloat(bank.action.deposit);
             bank.action.balance = bank.action.deposit;
-            alert("Your current balance is " + bank.action.balance + "br")
+            alert("You have withdraw " + amount + "br"+"\nYour current balance is " + bank.action.balance + "br")
         } else {
             alert("You don't have that much money");
         }
